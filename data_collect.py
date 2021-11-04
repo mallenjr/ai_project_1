@@ -10,12 +10,12 @@ hands = mpHands.Hands(max_num_hands=1, min_detection_confidence=0.7)
 mpDraw = mp.solutions.drawing_utils
 
 
-# thumbs = open('thumbs.dat', 'wb')
+thumbs = open('fist.dat', 'wb')
 
 count = 0
 
 # Initialize the webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 while True:
     # Read each frame from the webcam
@@ -69,7 +69,6 @@ while True:
     elif key == 51 and len(landmarks) > 0:
       print('save thumbs - count ', count)
       count += 1
-      # np.save(thumbs, np.array(landmarks))
     elif key == ord('q'):
       break
 

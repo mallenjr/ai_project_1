@@ -45,6 +45,6 @@ train_dataset = tf.data.Dataset.from_tensor_slices((train_data, train_labels))
 
 model.fit(train_data, train_labels, epochs=10, shuffle=True, batch_size=10)
 
-model.save('./gesture_model_new')
+model.save('./gesture_model_mac')
 
 model.evaluate(test_data, test_labels, verbose=1)
